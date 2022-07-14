@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Titan+One&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+          integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="container header">
+        <h1 class="main-title">ice cream made with <span class="word">passion</span></h1>
+
+        <picture>
+          <source srcset="./images.desktop/desktop-elipse.png 1x, ./images.desktop/desktop-elipse@2x.png 2x" media="min-width:1200px" />
+          <source srcset="./images/tablet/tablet-elipse.png 1x, ./images/tablet/tablet-elipse@2x.png 2x" media="min-width:768px" />
+          <img
+            class="elipse"
+            srcset="./images/phone/phone-elipse.png 1x, ./images/phone/phone-elipse@2x.png 2x"
+            src="./images/phone/phone-elipse.png"
+            alt="elipse"
+          />
+        </picture>
+
+        <picture>
+          <source srcset="./images/desktop/desktop-icecream.png 1x, ./images/desktop/desktop-icecream@2x.png 2x" media="min-width:1200px" />
+          <source srcset="./images/tablet/tablet-icecream.png 1x, ./images/tablet/tablet-icecream@2x.png 2x" media="min-width:768px" />
+          <img
+            class="icecream"
+            srcset="./images/phone/phone-icecream.png 1x, ./images/phone/phone-icecream@2x.png 2x"
+            src="./images/phone/phone-icecream.png"
+            alt="icecream"
+          />
+        </picture>
+        <picture>
+          <source srcset="./images/desktop/desktop-logo.png 1x, ./images/desktop/desktop-logo@2x.png 2x" media="min-width:1200px" />
+          <source srcset="./images/tablet/tablet-logo.png 1x, ./images/tablet/tablet-logo@2x.png 2x" media="min-width:768px" />
+          <img
+            class="logo"
+            srcset="./images/phone/phone-logo.png 1x, ./images/phone/phone-logo@2x.png 2x"
+            src="./images/phone/phone-logo.png"
+            alt="logo"
+          />
+        </picture>
+
+       
+
+        <button class="button-1" type="button">Products</button>
+        <button class="button-2" type="button">How it's made?</button>
+        <div class="menu-wrapper" data-menu>
+          <button type="button" class="buy-button " data-modal-open>Buy now<span class="mnemo"> > </span></button>
+          <nav>
+            <ul class="menu-nav">
+              <li class="menu-nav__item"><a href="" class="menu-nav__link">Home</a></li>
+              <li class="menu-nav__item"><a href="" class="menu-nav__link">About us</a></li>
+              <li class="menu-nav__item"><a href="" class="menu-nav__link">How it's made?</a></li>
+              <li class="menu-nav__item"><a href="" class="menu-nav__link">Our products</a></li>
+              <li class="menu-nav__item"><a href="" class="menu-nav__link">Contacts</a></li>
+            </ul>
+          </nav>
+            
+        </div>
+
+        <button class="menu-button" type="button" data-menu-button>
+          <svg class="menu-icon" width="20px" height="16px">
+            <use class="icon-burger" href="./images/symbol-defs.svg#icon-burger"></use>
+            <use class="icon-cross" href="./images/symbol-defs.svg#icon-close-button"></use>
+          </svg>
+        </button>
+      
+      </div>
+    </header>
+    <div class="backdrop backdrop--is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close-button" type="button" data-modal-close="">
+          <svg width="12px" height="12px">
+            <use href="./images/symbol-defs.svg#icon-close-button"></use>
+          </svg>
+        </button>
+        <form>
+          <div class="modal-wrapper">
+            <h2 class="modal-title">Choose your ice cream</h2>
+
+            <div class="form-field">
+              <label class="label" for="products">Choose product</label>
+              <select class="input-type" name="products" id="products">
+                <optgroup label="Ice Cream">
+                  <option value="str">Strawberry</option>
+                  <option value="choc">Chocolate</option>
+                  <option value="jam">With jam</option>
+                </optgroup>
+                <optgroup label="Ice Coffee">
+                  <option value="chm">Chocholate and mint</option>
+                  <option value="crm">Caramel</option>
+                  <option value="mch">Mocha</option>
+                </optgroup>
+                <optgroup label="Milkshakes">
+                  <option value="pch">Peach</option>
+                  <option value="rsp">Raspberry</option>
+                  <option value="mng">Mango</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label class="label" for="name">Name</label>
+              <input class="input-type" type="text" id="name" />
+            </div>
+
+            <div class="form-field">
+              <label class="label" for="tel">Phone number</label>
+              <input class="input-type" type="tel" id="tel" />
+            </div>
+
+            <div class="form-field">
+              <label class="label" for="email">Email</label>
+              <input class="input-type" type="email" id="email" />
+            </div>
+
+            <label class="agreements"
+              ><input class="input-agreements" type="checkbox" />by clicking the button, you agree to the public offer agreement and privacy
+              policy</label
+            >
+
+            <button class="ordered-button" type="submit">Order</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
+  </body>
+</html>
